@@ -19,9 +19,11 @@ Implementación de un pipeline reproducible de preprocesamiento y modelado de re
 3. **Modelo y persistencia:** Ensamblaje con `LinearRegression`, evaluación de métricas (`MAE` y `R²`), prueba de `.predict()` sobre datos nuevos y exportación del pipeline entrenado con `joblib`.
 
 ## Dependencias
-- `pandas`
-- `scikit-learn`
-- `joblib`
+-   pandas
+-   numpy
+-   scikit-learn
+-   joblib
+-   jupyter
 
 ## Ejecución y verificación de la rúbrica
 1. Abrir `Construcción_de_un_Pipeline_de_Preprocesamiento_Robusto.ipynb` en Google Colab o Jupyter.
