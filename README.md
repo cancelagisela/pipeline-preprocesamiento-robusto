@@ -18,8 +18,16 @@ Implementación de un pipeline reproducible de preprocesamiento y modelado de re
    - **Categóricas:** `SimpleImputer(strategy="most_frequent")` + `OneHotEncoder(handle_unknown="ignore")`.
 3. **Modelo y persistencia:** Ensamblaje con `LinearRegression`, evaluación de métricas (`MAE` y `R²`), prueba de `.predict()` sobre datos nuevos y exportación del pipeline entrenado con `joblib`.
 
-## Ejecución
+## Dependencias
+- `pandas`
+- `scikit-learn`
+- `joblib`
 
+## Ejecución y verificación de la rúbrica
 1. Abrir `Construcción_de_un_Pipeline_de_Preprocesamiento_Robusto.ipynb` en Google Colab o Jupyter.
-2. Asegurar que `shopping_trends_updated.csv` esté disponible en el entorno de ejecución.
-3. Ejecutar las celdas en orden para entrenar el modelo, evaluar métricas, probar predicciones y generar el archivo exportado con `joblib`.
+2. Verificar que `shopping_trends_updated.csv` esté en el directorio de trabajo (o subirlo al entorno de Colab).
+3. Ejecutar todas las celdas en orden:
+   - División **Train / Test** (`train_test_split`) antes del ajuste de transformadores.
+   - Preprocesamiento con `ColumnTransformer` y `Pipeline` (imputación y escalado en numéricas; imputación y codificación en categóricas).
+   - Entrenamiento del modelo de regresión, cálculo de métricas y prueba del método `.predict()` sobre datos nuevos.
+   - Exportación del pipeline entrenado mediante `joblib`.
