@@ -31,3 +31,26 @@ Implementación de un pipeline reproducible de preprocesamiento y modelado de re
    - Preprocesamiento con `ColumnTransformer` y `Pipeline` (imputación y escalado en numéricas; imputación y codificación en categóricas).
    - Entrenamiento del modelo de regresión, cálculo de métricas y prueba del método `.predict()` sobre datos nuevos.
    - Exportación del pipeline entrenado mediante `joblib`.
+
+## Resultados obtenidos
+Se construyó un pipeline reproducible de Machine Learning utilizando Scikit-Learn.
+El flujo implementado incluye:
+
+-   División de datos en entrenamiento y prueba.
+-   Imputación de valores faltantes.
+-   Escalado de variables numéricas.
+-   Codificación One-Hot de variables categóricas.
+-   Entrenamiento de un modelo de regresión.
+-   Evaluación mediante métricas de rendimiento.
+-   Toda la ejecución y los resultados pueden verificarse en el notebook incluido en este repositorio
+
+## Métricas obtenidas
+MAE: 20.72
+
+R²: -0.0057
+
+Además, se validó el pipeline realizando predicciones sobre nuevos datos.
+
+Ejemplo:
+
+[61.49, 57.55]
